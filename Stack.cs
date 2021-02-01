@@ -56,5 +56,6 @@ public Stack()
   }
   
   //todo : empty check
+  //todo : full check
 }
 
