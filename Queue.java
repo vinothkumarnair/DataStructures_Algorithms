@@ -2,7 +2,7 @@ class Main {
 
 
   public static void main(String args[]) {
-    String givenWordToReverse ="vinoth kum";
+    String givenWordToReverse ="vinoth kuma";
     
     Queue queue=new Queue();
     
@@ -33,7 +33,11 @@ public Queue()
 }
   public  void insert(char item)
   {
+      if(index == 10)
+        index=0;
+        
       queueArr[index]=item;
+      
       index=index+1;
   }
   
