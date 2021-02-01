@@ -33,6 +33,7 @@ public Queue()
 }
   public  void insert(char item)
   {
+      //circular queue
       if(index == 10)
         index=0;
         
