@@ -78,11 +78,15 @@ class SinglyLinkedList
         Node newNode=new Node(data);
         
         if(isEmpty())
+        {
             first=newNode;
-        
+        }
+        else
+        {
         last.next = newNode;
         last = newNode;
         return last;
+        }
         
     }
     
