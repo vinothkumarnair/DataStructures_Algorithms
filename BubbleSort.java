@@ -12,6 +12,7 @@ class Main {
     }
   } 
 }
+//performance O(n^2)
 //wont perform well
 // need lot of swapping compare to insertion sort
 class BubbleSort{
