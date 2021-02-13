@@ -12,7 +12,8 @@ class Main {
     }
   } 
 }
-
+//wont perform well
+// need lot of swapping compare to insertion sort
 class BubbleSort{
     
     public int[] sort(int[] array)
