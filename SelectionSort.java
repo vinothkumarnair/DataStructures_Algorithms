@@ -12,7 +12,7 @@ class Main {
     }
   } 
 }
-
+//performance O(n^2)
 //pick a biggest element from unsorted partion and move it to sorted partion
 class SelectionSort{
     
