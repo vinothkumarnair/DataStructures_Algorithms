@@ -13,6 +13,7 @@ class Main {
   } 
 }
 
+//pick a bigest element from unsorted partion and move it to sorted partion
 class SelectionSort{
     
     public int[] sort(int[] array)
