@@ -17,35 +17,25 @@ class InsertionSort{
     
     public int[] sort(int[] array)
     {
-        int sortedIndex=0;
-        for(int sortedArrayIndexCount=0; sortedArrayIndexCount<array.length;sortedArrayIndexCount++)
-        {
-            System.out.println("sorted index "+sortedArrayIndexCount);
-    
-            if(sortedArrayIndexCount!=array.length-1)
-            {
-                for(int unsortedIndexCount=sortedArrayIndexCount+1;unsortedIndexCount>0;unsortedIndexCount--)
-                {
-     
 
-                   if(array[unsortedIndexCount]<array[unsortedIndexCount-1])
-                   {
-                       System.out.println("swapping  "+(unsortedIndexCount+1) + " with "+ unsortedIndexCount);
-                       swap(array,unsortedIndexCount,unsortedIndexCount-1);
-                   }
-                    
-                }
+        for(int unsortedIndexCount=1; unsortedIndexCount<array.length;unsortedIndexCount++)
+        {
+            System.out.println("unsortedIndexCount index "+unsortedIndexCount);
+    
+            int element = array[unsortedIndexCount];
+            int lastIndexInSortedArray=unsortedIndexCount-1;
+            while(lastIndexInSortedArray >= 0 && array[lastIndexInSortedArray] > element)
+            {
+                array[lastIndexInSortedArray+1] = array[lastIndexInSortedArray];
+                lastIndexInSortedArray--;
             }
+            
+            array[lastIndexInSortedArray+1]=element;
             
         }
         return array;
     }
     
-    private void swap(int[] array,int index,int unsortedArrayLength)
-    {
-        int temp = array[index];
-        array[index]=array[unsortedArrayLength];
-        array[unsortedArrayLength]=temp;
-    }
+  
     
 }
