@@ -32,6 +32,14 @@ class InsertionSort{
             
             array[lastIndexInSortedArray+1]=element;
             
+            
+            System.out.println("***** after inner loop");
+                for(int printCount=0;printCount<array.length;printCount++)
+                {
+                    System.out.println(" inner "+ array[printCount] );
+                }
+            System.out.println("***** inner loop done");
+            
         }
         return array;
     }
