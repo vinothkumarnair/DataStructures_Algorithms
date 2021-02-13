@@ -27,7 +27,6 @@ class SelectionSort{
             {
                 if(array[swapCount]>array[largestIndex])
                 {
-                    
                     largestIndex = swapCount;
                     System.out.println("largest is "+largestIndex );
                 }
