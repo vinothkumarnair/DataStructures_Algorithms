@@ -33,7 +33,6 @@ class SelectionSort{
                 }
             }
             
-      
             System.out.println("swapping index "+largestIndex + " with "+ count);
             
             swap(array,largestIndex,count);
