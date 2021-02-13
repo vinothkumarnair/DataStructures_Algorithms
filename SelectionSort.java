@@ -2,7 +2,7 @@ class Main {
   public static void main(String args[]) { 
     System.out.println("Hello, world!");
     
-    int[] unsortedArray = new int[] {4,9,1,3,6,7};
+    int[] unsortedArray = new int[] {4,9,1,3,6,7,55,2};
     SelectionSort selectionSort=new SelectionSort();
     int[] sortedArray=selectionSort.sort(unsortedArray);
     
@@ -21,25 +21,30 @@ class SelectionSort{
         for(int count=array.length-1; count>=0;count--)
         {
             System.out.println("outer index "+count);
-            int largestIndex=-1;
+            int largestIndex=0;
             
-            for(int swapCount=0;swapCount<count;swapCount++)
+            for(int swapCount=0;swapCount<=count;swapCount++)
             {
-                if(array[swapCount]>array[swapCount+1])
+                if(array[swapCount]>array[largestIndex])
                 {
-                    System.out.println("largetst index is "+swapCount);
-                    largestIndex=swapCount;
+                    
+                    largestIndex = swapCount;
+                    System.out.println("largest is "+largestIndex );
                 }
             }
             
-            if(largestIndex>=0)
-            {
+      
             System.out.println("swapping index "+largestIndex + " with "+ count);
             
             swap(array,largestIndex,count);
-            }
             
-        
+            System.out.println("****** after sorting *****");
+            for(int printCount=0;printCount<array.length;printCount++)
+            {
+                System.out.println(" item "+ array[printCount] );
+            }
+            System.out.println("****** done sorting *****");
+            
         }
         return array;
     }
