@@ -1,6 +1,9 @@
 
 public class Main {
 
+    //with the gap value partially sort the array 
+    // and then apply insertion sort on top of it
+    // By doing this we will be able to cut down some iterations
     public static void main(String[] args) {
 
 	    int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
