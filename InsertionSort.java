@@ -13,6 +13,8 @@ class Main {
   } 
 }
 
+//if the array is almost sorted then it will be faster than selection sort
+//take an element from unsorted partion and rearrange the sorted partition till the element index
 class InsertionSort{
     
     public int[] sort(int[] array)
