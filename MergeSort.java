@@ -15,8 +15,12 @@ class Main {
 
 class MergeSort{
     
+    private int[] tempArray;
+    
     public int[] sort(int[] array)
     {
+        tempArray = new int[array.length];
+
         mergeSort(array,0,array.length-1);
         return array;
     }
@@ -40,7 +44,11 @@ class MergeSort{
         
         System.out.println("********* Merge *********");
          System.out.println("Merge :start "+ start + " mid " + mid + " end "+end);
-        merge(array, start,mid,end);
+         
+         
+        //merge(array, start,mid,end);
+        
+        mergeInPlace(array,start,mid,end);
         
         
     }
@@ -73,7 +81,7 @@ class MergeSort{
             tempIndex=tempIndex+1;
         }
         
-        //copy the already sorted values to temp
+        //copy the already sorted values to temp in left array
        if(leftIndex<=mid)
         {
             while(leftIndex<=mid)
@@ -107,6 +115,33 @@ class MergeSort{
     
     }
     
+   
+    //another implementation
+    public  void mergeInPlace(int[] array, int start, int mid, int end) {
+        int leftIndex = start;
+        int rightIndex = mid + 1;
+
+        for(int tempIndex = 0; tempIndex <= end; tempIndex++) {
+            tempArray[tempIndex] = array[tempIndex]; 
+        }
+
+        for (int tempIndex = start; tempIndex <= end; tempIndex++) {
+            if (leftIndex > mid) {
+                array[tempIndex] = tempArray[rightIndex];
+                rightIndex++;
+            } else if (rightIndex > end) {
+                array[tempIndex] = tempArray[leftIndex];
+                leftIndex++;
+            } else if (tempArray[rightIndex] < tempArray[leftIndex]) {
+                array[tempIndex] = tempArray[rightIndex];
+                rightIndex++;
+            } else {
+                array[tempIndex] = tempArray[leftIndex];
+                leftIndex++;
+            }
+        }
+    }
+
     
     
 }
