@@ -13,6 +13,8 @@ class Main {
   } 
 }
 
+// compre to quick sort this needs more memory becuase we create temp arrays and copy it to original array
+// average performance - nlogn
 class MergeSort{
     
     private int[] tempArray;
