@@ -46,16 +46,16 @@ class MergeSort{
          System.out.println("Merge :start "+ start + " mid " + mid + " end "+end);
          
          
-        //merge(array, start,mid,end);
+        merge(array, start,mid,end);
         
-        mergeInPlace(array,start,mid,end);
+        //mergeInPlace(array,start,mid,end);
         
         
     }
     
     
-    // first sorted array  - 1,3,5,7 ( index - 0 to 3)
-    // second sorted array - 2,4,6,8 ( index - 4 to 7)
+    // first sorted array  - 1,3,4,9 ( index - 0 to 3)
+    // second sorted array - 2,6,7,55 ( index - 4 to 7)
     //start 0     mid    3    end    7
     private void merge(int[] array, int start, int mid, int end)
     {
@@ -81,9 +81,12 @@ class MergeSort{
             tempIndex=tempIndex+1;
         }
         
+        System.out.println("after merge rightindex "+ rightIndex +" leftIndex " + leftIndex + " tempIndex "+tempIndex);
+        
         //copy the already sorted values to temp in left array
        if(leftIndex<=mid)
         {
+            System.out.println("extra copy for already sorted left array");
             while(leftIndex<=mid)
             {
                 tempArray[tempIndex]=array[leftIndex];
@@ -92,6 +95,7 @@ class MergeSort{
             }
         }else if (rightIndex<=end)
         {
+            System.out.println("extra copy for already sorted right array - rightIndex : "+ rightIndex + " and the end is "+end);
             while(rightIndex<=end)
             {
                 tempArray[tempIndex]=array[rightIndex];
