@@ -73,7 +73,7 @@ class MergeSort{
             tempIndex=tempIndex+1;
         }
         
-        //copy the already sorted values to temp in left array
+        //copy the already sorted values to temp
        if(leftIndex<=mid)
         {
             while(leftIndex<=mid)
